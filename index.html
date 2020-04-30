@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Edit photo</title>
+</head>
+<body>
+    <div class="container">
+        
+        <input type="file" name="img-src" id="img-src" placeholder="Choose a photo" value="asd" accept="image/*"><br>
+        
+        <div class="controls">
+        <table >
+            <tr>
+                <td>
+                    <label for="blur">blur</label>
+                </td>
+                <td>
+                    <input onchange="setValues()" class="control" type="range" value="0" id="blur" name="blue" min="0" max="20">
+                </td>
+                <td>
+                    <span id="s-blue">0px</span> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="blur">brightness</label>
+                </td>
+                <td>
+                    <input onchange="setValues()" class="control" type="range" value="100" id="brightness" name="brightness" min="0" max="150">
+                </td>
+                <td>
+                    <span id="s-brightness">100%</span>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="blur">contrast</label>
+                </td>
+                <td>
+                    <input onchange="setValues()"class="control" type="range" value="100" id="contrast" name="contrast" min="0" max="150">
+                </td>
+                <td>
+                    <span id="s-contrast">100%</span> 
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="blur">grayscale</label></td>
+                <td><input onchange="setValues()"class="control" type="range" value="0" id="grayscale" name="grayscale" min="0" max="100"></td>
+                <td><span id="s-grayscale">0%</span></td>
+                
+            </tr>
+
+            <tr>
+                <td><label for="blur">hue-rotate</label></td>
+               <td> <input onchange="setValues()"class="control" type="range" value="0" id="hue-rotate" name="hue-rotate" min="0" max="360"></td>
+                <td><span id="s-hue-rotate">0deg</span> </td>
+
+            </tr>
+
+            <tr>
+                <td><label for="blur">invert</label></td>
+                <td><input oninput="setValues()"class="control" type="range" value="0" id="invert" name="invert" min="0" max="100"></td>
+               <td><span id="s-invert">0%</span> </td>
+
+            </tr>
+
+            <tr>
+                <td><label for="blur">opacity</label></td>
+                <td><input onchange="setValues()" class="control" type="range" value="100" id="opacity" name="opacity" min="0" max="100"></td>
+               <td><span id="s-opacity">100%</span> </td>
+
+            </tr>
+
+            <tr>
+                <td><label for="blur">saturate</label></td>
+                <td><input onchange="setValues()"class="control" type="range" value="100" id="saturate" name="saturate" min="0" max="100"></td>
+                <td><span id="s-saturate">100%</span> </td>
+
+            </tr>
+
+            <tr>
+
+                <td><label for="blur">sepia</label></td>
+                <td><input onchange="setValues()"class="control" type="range" value="0" id="sepia" name="sepia" min="0" max="100"></td>
+                <td><span id="s-sepia">0%</span></td>
+                
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input type="button" value="Reset" name="reset" id="reset">
+                </td>
+            </tr>
+            </table>
+        </div>
+        <img id="my-img" src="500.png" alt="">
+
+    </div>
+
+    <script  src="script.js"></script>
+</body>
+</html>
